@@ -23,14 +23,14 @@ venv\Scripts\activate   # Windows
 pip install -r requirements.txt
 ```
 
-3. Run the Flask app:
+3. Run the streamlit app:
 ```
-python app.py
+streamlit run app.py
 ```
 
 4. Open your browser and go to:
 ```
-http://127.0.0.1:5000/
+http://localhost:8501/
 ```
 
 ## Notes
