@@ -1,0 +1,38 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AI Content Generator</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 700px; margin: 30px auto; }
+  textarea { width: 100%; font-size: 1rem; padding: 10px; }
+  button { margin-top: 10px; padding: 10px 20px; font-size: 1rem; }
+  pre { background: #f4f4f4; padding: 15px; white-space: pre-wrap; word-wrap: break-word; }
+</style>
+</head>
+<body>
+  <h1>AI-Powered Content Generator</h1>
+  <textarea id="prompt" rows="4" placeholder="Enter your prompt here..."></textarea><br/>
+  <button onclick="generate()">Generate</button>
+  <h3>Output:</h3>
+  <pre id="output"></pre>
+
+<script>
+async function generate() {
+  const prompt = document.getElementById('prompt').value;
+  document.getElementById('output').textContent = 'Generating... Please wait.';
+  const response = await fetch('/generate', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({prompt})
+  });
+  const data = await response.json();
+  if (response.ok) {
+    document.getElementById('output').textContent = `Generated Text:\n${data.generated_text}\n\nSentiment:\n${JSON.stringify(data.sentiment, null, 2)}`;
+  } else {
+    document.getElementById('output').textContent = 'Error: ' + data.error;
+  }
+}
+</script>
+</body>
+</html> -->
